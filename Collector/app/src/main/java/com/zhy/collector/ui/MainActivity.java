@@ -1,4 +1,4 @@
-package com.zhy.collector;
+package com.zhy.collector.ui;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.zhy.collector.R;
+import com.zhy.collector.widget.HeartView;
 import com.zhy.collector.widget.SplashView;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
-        setContentView(new SplashView(this));
+        setContentView(new HeartView(this));
         /*BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);*/
