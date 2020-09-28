@@ -16,7 +16,7 @@ public class MyClass {
         threadC.start();
     }
 
-    private static void operate(){
+    private static void operate() {
 
     }
 
