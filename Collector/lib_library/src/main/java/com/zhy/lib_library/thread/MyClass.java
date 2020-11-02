@@ -10,7 +10,7 @@ public class MyClass {
         ThreadB threadB = new ThreadB();
         ThreadC threadC = new ThreadC();
         threadA.start();
-//        threadA.join();
+        threadA.join();
         threadB.start();
 //        threadB.join();
         threadC.start();

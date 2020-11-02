@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -50,6 +51,23 @@ public class UIUtils {
     private static final String SCREE_PARAMETER_1440 = "1440x2560";
     private static final String SCREE_PARAMETER_1600 = "2560x1600";
 
+
+    public static void handleView(View v) {
+        if (null == v) return;
+        LinkedList<View> viewQueue = new LinkedList<>();
+        View view = v;
+        viewQueue.push(v);
+        while (!viewQueue.isEmpty()) {
+            view = viewQueue.poll();
+            if (view instanceof ViewGroup) {
+                for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
+                    View childView = ((ViewGroup) view).getChildAt(i);
+                    viewQueue.add(childView);
+                }
+            }
+        }
+
+    }
 
     /**
      * 返回当前手机屏幕尺寸
@@ -135,7 +153,7 @@ public class UIUtils {
     }
 
 
-    public static float sp2px( Context context,float spValue) {
+    public static float sp2px(Context context, float spValue) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 spValue, context.getResources().getDisplayMetrics());
     }
@@ -339,7 +357,6 @@ public class UIUtils {
         ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(metric);
         return metric;
     }
-
 
 
     /**

@@ -28,7 +28,8 @@ public class ThreadTest {
     }
 
     public static void main(String[] args) throws Exception {
-        new ThreadA().start();
+        Thread threadA = new ThreadA();
+        threadA.start();
         Thread.sleep(100);
         new ThreadB().start();
         System.out.println("main thread exist !");
