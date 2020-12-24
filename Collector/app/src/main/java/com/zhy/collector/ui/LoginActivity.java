@@ -1,5 +1,6 @@
 package com.zhy.collector.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -49,7 +50,8 @@ public class LoginActivity extends BaseView<LoginPresenter, LoginContract.View> 
        /* String name = etName.getText().toString();
         String pwd = etPwd.getText().toString();
         p.getContract().requestLogin(name, pwd);*/
-        run();
+//        run();
+        startActivity(new Intent(getApplication(),MainActivity.class));
     }
 
 
