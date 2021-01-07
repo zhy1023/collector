@@ -1,5 +1,5 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.mob.sdk'
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: "androidx.navigation.safeargs"
 
 def androidId = rootProject.ext.androidId
@@ -14,7 +14,7 @@ android {
         targetSdkVersion androidId.targetSdkVersion
         versionCode androidId.versionCode
         versionName androidId.versionName
-        manifestPlaceholders = rootProject.ext.getuiConf
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -40,59 +40,14 @@ android {
         }
     }
 
-    dataBinding {
-        enabled true
-    }
+    dataBinding { enabled true }
     viewBinding { enabled true }
 }
 
-MobSDK {
-    appKey "292b9fa143a90"
-    appSecret "2497d48e33c2ac3fab4b308240118510"
-    permissions {
-        exclude "android.permission.READ_SMS", "android.permission.RECEIVE_SMS"
-    }
-
-    googlePlay true
-
-    ShareSDK {
-        gui false
-        devInfo {
-            Wechat {
-                appId "wxb9a817331acf428d"
-                bypassApproval false
-                shareByAppClient true
-                enable true
-            }
-
-            WechatMoments {
-                appId "wxb9a817331acf428d"
-                bypassApproval false
-                shareByAppClient true
-                enable true
-            }
-
-            SinaWeibo {
-                appKey "3283806082"
-                callbackUri "https://pgy.oray.com"
-                shareByAppClient true
-                enable true
-            }
-
-            QQ {
-                appId "1105731980"
-                appKey "coeoTSfjcXtG8tPO"
-                shareByAppClient true
-                enable true
-            }
-        }
-    }
-}
 
 allprojects {
     repositories {
         mavenCentral()
-        maven { url 'http://mvn.gt.igexin.com/nexus/content/repositories/releases' }
         maven { url "https://jitpack.io" }
     }
 }

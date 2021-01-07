@@ -14,13 +14,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
 
-import static com.mob.tools.utils.DeviceHelper.getApplication;
 
 public class JsonUtils {
     private static final String AGREEMENT = "agreement";

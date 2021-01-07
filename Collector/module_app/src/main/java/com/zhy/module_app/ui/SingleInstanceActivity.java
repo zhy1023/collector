@@ -6,7 +6,7 @@
  *  without the prior consent of Oray Inc.
  */
 
-package com.zhy.collector.ui;
+package com.zhy.module_app.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

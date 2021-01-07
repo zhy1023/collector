@@ -12,7 +12,6 @@ import android.webkit.MimeTypeMap;
 
 import com.zhy.lib_common.R;
 
-import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -144,13 +143,6 @@ public class FileUtils {
             R.drawable.file_compress_package, R.drawable.file_movie, R.drawable.file_ppt};
 
 
-    public static boolean isMediaIcon(String str) {
-        String[] mediaArray = ArrayUtils.addAll(extensions[2], extensions[7]);
-        for (String s : mediaArray) {
-            if (s.equals(str)) return true;
-        }
-        return false;
-    }
 
     public static boolean isImgIcon(String str) {
         for (String s : extensions[2]) {

@@ -1,4 +1,4 @@
+include ':module_app'
 include ':module_aspectj'
 include ':lib_library'
 include ':lib_common'
-include ':app'
