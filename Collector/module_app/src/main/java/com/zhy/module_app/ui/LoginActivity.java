@@ -1,4 +1,4 @@
-package com.zhy.collector.ui;
+package com.zhy.module_app.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.zhy.collector.R;
-import com.zhy.collector.utils.DataUtils;
 import com.zhy.lib_common.utils.LogUtils;
+import com.zhy.module_app.MainActivity;
+import com.zhy.module_app.R;
+import com.zhy.module_app.utils.DataUtils;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         String pwd = etPwd.getText().toString();
         p.getContract().requestLogin(name, pwd);*/
 //        run();
-        startActivity(new Intent(getApplication(),MainActivity.class));
+        startActivity(new Intent(getApplication(), MainActivity.class));
     }
 
 

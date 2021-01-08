@@ -11,9 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_common" />
             <option value="$PROJECT_DIR$/lib_library" />
+            <option value="$PROJECT_DIR$/module_app" />
             <option value="$PROJECT_DIR$/module_aspectj" />
           </set>
         </option>
