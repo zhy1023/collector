@@ -7,7 +7,7 @@ buildscript {
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath 'com.android.tools.build:gradle:4.1.1'
         classpath 'com.mob.sdk:MobSDK:2018.0319.1724'
         //添加神策分析依赖
         classpath 'com.sensorsdata.analytics.android:android-gradle-plugin2:3.2.9'
