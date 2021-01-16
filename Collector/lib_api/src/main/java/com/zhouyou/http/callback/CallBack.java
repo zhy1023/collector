@@ -29,9 +29,13 @@ import java.lang.reflect.Type;
  * 版本： v2.0<br>
  */
 public abstract class CallBack<T> implements IType<T> {
-    public abstract void onStart();
+    public void onStart() {
+    }
 
-    public abstract void onCompleted();
+
+    public void onCompleted() {
+    }
+
 
     public abstract void onError(ApiException e);
 
