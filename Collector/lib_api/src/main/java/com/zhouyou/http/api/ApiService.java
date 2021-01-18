@@ -19,6 +19,7 @@ package com.zhouyou.http.api;
 import java.util.List;
 import java.util.Map;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -61,7 +62,7 @@ public interface ApiService {
 
     @POST()
     @FormUrlEncoded
-    Observable<ResponseBody> post(@Url String url, @FieldMap Map<String, String> maps);
+    Flowable<ResponseBody> post(@Url String url, @FieldMap Map<String, String> maps);
 
     @POST()
     Observable<ResponseBody> postBody(@Url String url, @Body Object object);

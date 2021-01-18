@@ -1,3 +1,4 @@
+include ':lib_api'
 include ':module_app'
 include ':module_aspectj'
 include ':lib_library'

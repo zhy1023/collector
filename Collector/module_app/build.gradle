@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+def androidId = rootProject.ext.androidId
+def support = rootProject.ext.appDependencies
+
+android {
+    compileSdkVersion androidId.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.appId.applicationId
+        minSdkVersion androidId.minSdkVersion
+        targetSdkVersion androidId.targetSdkVersion
+        versionCode androidId.versionCode
+        versionName androidId.versionName
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'http://mvn.gt.igexin.com/nexus/content/repositories/releases' }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':lib_common')
+    support.each { k, v -> implementation v }
+
+}
