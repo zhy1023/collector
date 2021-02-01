@@ -154,7 +154,7 @@ public class Utils {
             return type;
         }
     }
-    
+
     public static Type getParameterizedType(Type type, int i) {
         if (type instanceof ParameterizedType) { // 处理泛型类型    
             Type genericType = ((ParameterizedType) type).getActualTypeArguments()[i];

@@ -5,6 +5,7 @@
       <module name="Collector.app" target="1.8" />
       <module name="Collector.lib_api" target="1.8" />
       <module name="Collector.lib_common" target="1.8" />
+      <module name="Collector.module_app" target="1.8" />
       <module name="Collector.module_aspectj" target="1.8" />
       <module name="lib_library" target="1.7" />
     </bytecodeTargetLevel>

@@ -1,5 +1,7 @@
 package com.zhy.lib_library.arithmetic;
 
+import java.util.ArrayList;
+
 /**
  * @Author ；zhy
  * @ClassName: MainClass
@@ -12,6 +14,10 @@ public class MainClass {
 //        System.out.println("isUniqueStr :" + Utils.isUniqueStr("asfcdea"));
 //        System.out.println("compressStr :" + Utils.compressStr("aaaafcccccdeeeeh"));
 //        System.out.println("oneEditAway :" + Utils.oneEditAway("pales","pal"));
-        System.out.println("canPermutePalindrome :" + Utils.canPermutePalindrome("aab"));
+//        System.out.println("canPermutePalindrome :" + Utils.canPermutePalindrome("aab"));
+        ListNode node = new ListNode(1);
+        node.next = new ListNode(2);
+        System.out.println(node.toString());
+
     }
 }

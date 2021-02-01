@@ -98,9 +98,9 @@ public final class EasyHttp {
     private int mRetryIncreaseDelay = DEFAULT_RETRY_INCREASEDELAY;    //叠加延迟
     private HttpHeaders mCommonHeaders;                               //全局公共请求头
     private HttpParams mCommonParams;                                 //全局公共请求参数
-    private OkHttpClient.Builder okHttpClientBuilder;                 //okhttp请求的客户端
-    private Retrofit.Builder retrofitBuilder;                         //Retrofit请求Builder
-    private RxCache.Builder rxCacheBuilder;                           //RxCache请求的Builder
+    private final OkHttpClient.Builder okHttpClientBuilder;                 //okhttp请求的客户端
+    private final Retrofit.Builder retrofitBuilder;                         //Retrofit请求Builder
+    private final RxCache.Builder rxCacheBuilder;                           //RxCache请求的Builder
     private CookieManger cookieJar;                                   //Cookie管理
     private List<Interceptor> headerInterceptor;                       // 位于Header拦截器之后的拦截器
     private Interceptor logInterceptor;

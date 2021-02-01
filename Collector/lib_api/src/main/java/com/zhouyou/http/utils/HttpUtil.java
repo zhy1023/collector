@@ -17,6 +17,7 @@
 package com.zhouyou.http.utils;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 /**
@@ -26,7 +27,7 @@ import java.util.Map;
  * 版本： v1.0<br>
  */
 public class HttpUtil {
-    public static final Charset UTF8 = Charset.forName("UTF-8");
+    public static final Charset UTF8 = StandardCharsets.UTF_8;
     public static String createUrlFromParams(String url, Map<String, String> params) {
         try {
             StringBuilder sb = new StringBuilder();
