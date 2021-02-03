@@ -1,5 +1,7 @@
 package com.zhy.lib_library.arithmetic;
 
+import com.zhy.lib_library.data_struct.ListNode;
+
 /**
  * @Author ；zhy
  * @ClassName: LinkUtils

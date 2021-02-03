@@ -1,4 +1,4 @@
-package com.zhy.lib_library.arithmetic;
+package com.zhy.lib_library.data_struct;
 
 /**
  * @Author ；zhy
@@ -7,10 +7,10 @@ package com.zhy.lib_library.arithmetic;
  * @Describe :
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 
