@@ -55,7 +55,7 @@ allprojects {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-//    api project(':lib_api')
+    api project(':lib_api')
     support.each { k, v -> implementation v }
     annotation.each { k, v -> annotationProcessor v }
 
