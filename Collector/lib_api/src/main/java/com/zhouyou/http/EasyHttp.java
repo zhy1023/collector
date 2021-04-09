@@ -16,6 +16,7 @@
 
 package com.zhouyou.http;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
@@ -624,6 +625,7 @@ public final class EasyHttp {
     /**
      * 清空缓存
      */
+    @SuppressLint("CheckResult")
     public static void clearCache() {
         getRxCache().clear().compose(RxUtil.<Boolean>io_main())
                 .subscribe(new Consumer<Boolean>() {
@@ -642,6 +644,7 @@ public final class EasyHttp {
     /**
      * 移除缓存（key）
      */
+    @SuppressLint("CheckResult")
     public static void removeCache(String key) {
         getRxCache().remove(key).compose(RxUtil.<Boolean>io_main()).subscribe(new Consumer<Boolean>() {
             @Override

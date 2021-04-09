@@ -37,7 +37,7 @@ import okhttp3.Response;
  */
 public class HeadersInterceptor implements Interceptor {
 
-    private HttpHeaders headers;
+    private final HttpHeaders headers;
 
     public HeadersInterceptor(HttpHeaders headers) {
         this.headers = headers;

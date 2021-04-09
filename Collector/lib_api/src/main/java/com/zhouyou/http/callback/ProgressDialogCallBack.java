@@ -34,7 +34,7 @@ import io.reactivex.disposables.Disposable;
  * 版本： v1.0<br>
  */
 public abstract class ProgressDialogCallBack<T> extends CallBack<T> implements ProgressCancelListener {
-    private IProgressDialog progressDialog;
+    private final IProgressDialog progressDialog;
     private Dialog mDialog;
     private boolean isShowProgress = true;
 

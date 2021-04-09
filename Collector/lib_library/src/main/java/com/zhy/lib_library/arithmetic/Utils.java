@@ -1,5 +1,7 @@
 package com.zhy.lib_library.arithmetic;
 
+import com.zhy.lib_library.bean.LinkNode;
+
 /**
  * @Author ；zhy
  * @ClassName: Utils
@@ -7,6 +9,22 @@ package com.zhy.lib_library.arithmetic;
  * @Describe : Utils
  */
 public class Utils {
+
+    public static int findIndex(int[] numArray, int index) {
+        int left = 0;
+        int right = numArray.length - 1;
+        int mid = 0;
+        while (left < right) {
+            mid = (left + right) >> 1;
+            if (numArray[mid] == index) return mid;
+            if (numArray[mid] < index) left = mid;
+            if (numArray[mid] > index) right = mid;
+        }
+
+        return -1;
+    }
+
+
     /**
      * TODO 确定一个字符串 s 的所有字符是否全都不同。
      */
@@ -135,7 +153,7 @@ public class Utils {
                     charCount++;
                 }
             }
-            if(charCount == s.length()) break;
+            if (charCount == s.length()) break;
             if (charCount == 1) count++;
             if (count > 1) {
                 isPalindromeStr = false;
@@ -145,4 +163,18 @@ public class Utils {
         return isPalindromeStr;
     }
 
+    /**
+     * 反转链表
+     *
+     * @param header
+     * @return
+     */
+    public static LinkNode reverseNode(LinkNode header) {
+        if (header == null || header.next == null) return header;
+        LinkNode next = header.next;
+        LinkNode newHeader = reverseNode(next);
+        header.next = null;
+        next.next = header;
+        return newHeader;
+    }
 }

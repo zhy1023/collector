@@ -19,6 +19,7 @@ package com.zhouyou.http.interceptor;
 import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -44,7 +45,7 @@ import okio.Buffer;
  */
 public class HttpLoggingInterceptor implements Interceptor {
 
-    private static final Charset UTF8 = Charset.forName("UTF-8");
+    private static final Charset UTF8 = StandardCharsets.UTF_8;
 
     private volatile Level level = Level.NONE;
     private Logger logger;

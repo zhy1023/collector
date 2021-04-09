@@ -31,7 +31,24 @@ public class TestClass {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }*/
+        ThreadA threadA = new ThreadA();
+        threadA.start();
+        threadA.interrupt();
+    }
 
+
+    static class ThreadA extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            try {
+                System.out.println("thread A start !");
+                sleep(2000);
+            } catch (InterruptedException e) {
+                System.out.println("thread A awake !");
+                e.printStackTrace();
+            }
+        }
     }
 
 }

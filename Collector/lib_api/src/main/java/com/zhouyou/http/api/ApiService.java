@@ -62,7 +62,7 @@ public interface ApiService {
 
     @POST()
     @FormUrlEncoded
-    Flowable<ResponseBody> post(@Url String url, @FieldMap Map<String, String> maps);
+    Observable<ResponseBody> post(@Url String url, @FieldMap Map<String, String> maps);
 
     @POST()
     Observable<ResponseBody> postBody(@Url String url, @Body Object object);
